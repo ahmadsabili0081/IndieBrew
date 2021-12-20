@@ -1,0 +1,415 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+$fontfamily : 'DM Sans', sans-serif;
+:root{
+    --background-banner: linear-gradient(115deg, rgba(184, 73, 252, 0.3) 0%, rgba(253, 131, 63, 0) 40%) no-repeat;
+    --background-btn : #664EFC;
+    --background-hero : #fff;
+    --color-text: #6B6B6B;
+}
+@media screen and (max-width:1024px) {
+    .container{
+        width: 100%;
+        min-height: auto;
+        overflow-x: hidden;
+        position: relative;
+        header{
+            width: 100%;
+            .container__header{
+                width: 100%;
+            }
+        }
+        section.banner__IndieBrew{
+            padding: 0px 10px;
+            height: 100%;
+            .container__banner__IndieBrew{
+                width: 100%;
+                .row__banner__IndieBrew{
+                    .box__banner__text{
+                        h1{
+                            font-size: 40px;
+                        }
+                        span.text{
+                            line-height: 0px;
+                        }
+                    }
+                }
+            }
+        }
+        section.IndieBrew__hero{
+            padding: 100px 10px;
+            .container__IndieBrew__hero{
+                width: 100%;
+                .row__IndieBrew__hero{
+                    .box__text__hero{
+                        width: 500px;
+                        h1{
+                            font-size: 40px;
+                        }
+                    }
+                }
+            }
+        }
+        section.IndieBrew__hero__2{
+            padding: 20px 10px;
+            .container__IndieBrew__hero__2{
+                width: 100%;
+                .row__IndieBrew__hero__2{
+                    .box__text__hero__2{
+                        h1{
+                            font-size: 40px;
+                        }
+                    }
+                }
+            } 
+        }
+        section.footer{
+            padding: 50px 10px;
+            footer{
+                width: 100%;
+                .box__footer_text{
+                    width: 250px;
+                }
+            }
+        }
+
+    }
+}
+@media screen and (max-width:768px) {
+    .container{
+        width: 100%;
+        min-height: 100vh;
+        overflow-x: hidden;
+        position: relative;
+        header{
+            width: 100%;
+            .container__header{
+                width: 100%;
+            }
+        }
+        section.banner__IndieBrew{
+            padding: 0px 10px;
+            height: 100%;
+            .container__banner__IndieBrew{
+                width: 100%;
+                .row__banner__IndieBrew{
+                    .box__banner__text{
+                        h1{
+                            font-size: 35px;
+                        }
+                        span.text{
+                            line-height: 0px;
+                        }
+                    }
+                }
+            }
+        }
+        section.IndieBrew__hero{
+            padding: 100px 10px;
+            .container__IndieBrew__hero{
+                width: 100%;
+                .row__IndieBrew__hero{
+                    .box__text__hero{
+                        width: 500px;
+                        h1{
+                            font-size: 35px;
+                        }
+                    }
+                }
+            }
+        }
+        section.IndieBrew__hero__2{
+            padding: 20px 10px;
+            .container__IndieBrew__hero__2{
+                width: 100%;
+                .row__IndieBrew__hero__2{
+                    .box__text__hero__2{
+                        h1{
+                            font-size: 35px;
+                        }
+                    }
+                }
+            } 
+        }
+        section.footer{
+            padding: 50px 10px;
+            footer{
+                width: 100%;
+                .box__footer_text{
+                    width: 250px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:570px){
+    .container{
+        width: 100%;
+        min-height: 100vh;
+        overflow-x: hidden;
+        position: relative;
+        header{
+            width: 100%;
+            .container__header{
+                width: 100%;
+                .hamburger{
+                    width: 30px;
+                    height: 20px;
+                    position: fixed;
+                    right: 20px;
+                    top: 15px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-direction: column;
+                    z-index: 300;
+                    cursor: pointer;
+                    span.bar{
+                        width: 100%;
+                        background-color: #000;
+                        border: 5px;
+                        height: 3px;
+                        transition: 0.5s;
+                    }
+                }
+                .hamburger.rotate{
+                    span.bar:first-child{
+                        transform: rotate(45deg) translate(7px,7px);
+                        transition: 0.5s;
+                    }
+                    span.bar:nth-child(2){
+                        transform: translateX(20px);
+                        transition: 0.5s;
+                        opacity: 0;
+                    }
+                    span.bar:last-child{
+                        transform: rotate(-45deg) translate(5px,-5px);
+                        transition: 0.5s;
+                    }
+                }
+                nav.navbar__IndieBrew{
+                    width: 100%;
+                    min-height: 100vh;
+                    position: fixed;
+                    top: 0px;
+                    left: -100%;
+                    right: 0px;
+                    bottom: 0px;
+                    background-color: #6B6B6B;
+                    z-index: 150;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    transition: 0.5s;
+                    ul.slist__item{
+                        flex-direction: column;
+                        margin-top: 30%;
+                    }
+                }
+                nav.navbar__IndieBrew.showNav{
+                    left: 0;
+                    transition: 0.5s;
+                }
+                .btn__home__page{
+                    button.btn__homepage{
+                        margin-right: 5px;
+                    }
+                    span{
+                        display: none;
+                    }
+                }
+            }
+        }
+        section.banner__IndieBrew{
+            padding: 0px 10px;
+            .container__banner__IndieBrew{
+                width: 100%;
+                padding-top: 80px;
+                padding-bottom: 0px;
+                .row__banner__IndieBrew{
+                    flex-direction: column-reverse;
+                    .box__banner__text{
+                        width: 100%;
+                        margin-top: 5%;
+                        text-align: center;
+                        h1{
+                            font-size: 30px;
+                        }
+                        .btn__banner{
+                            button.btn__banner{
+                                margin: 0px auto;
+                            }
+                        }
+                        img{
+                            margin: 30px auto;
+                        }
+                        span.text{
+                            margin: -20px 0px;
+                            width: 80%;
+                            line-height: 0px;
+                        }
+                    }
+                    .box__banner__img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        section.sign__up_IndieBrew{
+            padding: 0px 10px;
+            .container__sign__up_IndieBrew{
+                width: 100%;
+                .row__sign__up_IndieBrew{
+                    flex-direction: column;
+                    padding: 0px;
+                    .box__sign__up_IndieBrew{
+                        width: 100%;
+                        h1{
+                            text-align: center;
+                        }
+                        p{
+                            margin-left: 40px;
+                        }
+                        p.title__1::before{
+                            left: 5px;
+                        }
+                        p.title__2::before{
+                            left: 5px;
+                        }
+                        p.title__3::before{
+                            left: 5px;
+                        }
+                    }
+                    .box__form__sign__up_IndieBrew{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        section.IndieBrew__hero{
+            padding: 100px 10px;
+            .container__IndieBrew__hero{
+                width: 100%;
+                padding-top: 20px;
+                .row__IndieBrew__hero{
+                    flex-direction: column-reverse;
+                    .box__text__hero{
+                        width: 100%;
+                        margin-top: 10%;
+                        text-align: center;
+                        h1{
+                            font-size: 30px;
+                        }
+                    }
+                    .box__text__hero__img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        section.IndieBrew__hero__2{
+            padding: 50px 10px;
+            .container__IndieBrew__hero__2{
+                width: 100%;
+                .row__IndieBrew__hero__2{
+                    flex-direction: column;
+                    .box__image__phone{
+                        width: 100%;
+                    }
+                    .box__text__hero__2{
+                        width: 100%;
+                        text-align: center;
+                        h1{
+                            font-size: 30px;
+                            margin: 40px 0px;
+                        }
+                    }
+                }
+            }
+        }
+        section.footer{
+            padding: 50px 10px;
+            footer{
+                flex-direction: column-reverse;
+                width: 100%;
+                .box__footer_text{
+                    width: 100%;
+                    text-align: center;
+                    margin-top: 5%;
+                }
+                .list__footer{
+                    margin-top: 5%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 375px) {
+    .container{
+        width: 100%;
+        min-height: 100vh;
+        overflow-x: hidden;
+        section.banner__IndieBrew{
+            padding: 0px 10px;
+            .container__banner__IndieBrew{
+                width: 100%;
+                .row__banner__IndieBrew{
+                    flex-direction: column-reverse;
+                    .box__banner__text{
+                        width: 100%;
+                        margin-top: 5%;
+                        text-align: center;
+                        h1{
+                            font-size: 30px;
+                        }
+                        .btn__banner{
+                            button.btn__banner{
+                                margin: 0px auto;
+                            }
+                        }
+                        img{
+                            margin: 30px auto;
+                        }
+                        span.text{
+                            margin: -20px 0px;
+                            width: 80%;
+                            line-height: 0px;
+                        }
+                    }
+                    .box__banner__img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        section.IndieBrew__hero{
+            padding: 10px 10px;
+            .container__IndieBrew__hero{
+                width: 100%;
+                height: auto;
+                .row__IndieBrew__hero{
+                    flex-direction: column-reverse;
+                    .box__text__hero{
+                        width: 100%;
+                        h1{
+                            font-size: 30px;
+                        }
+                    }
+                    .box__text__hero__img{
+                        width: 100%;
+                        height: auto;
+                        img{
+                            margin: 0px auto;
+                            width: 90%;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,474 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+$fontfamily : 'DM Sans', sans-serif;
+:root{
+    --background-banner: linear-gradient(115deg, rgba(184, 73, 252, 0.3) 0%, rgba(253, 131, 63, 0) 40%) no-repeat;
+    --background-btn : #664EFC;
+    --background-hero : #fff;
+    --color-text: #6B6B6B;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    .btn{
+        padding: 10px;
+        position: fixed;
+        bottom: 20px;
+        right: -50px;
+        background-color: var(--background-btn);
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 180;
+        transition: 0.5s;
+        i{
+            color: #fff;
+        }
+    }
+    .btn.btnShow{
+        right: 20px;
+        transition: 0.5s;
+    }
+    header{
+        width: 100%;
+        padding: 2% 3%;
+        position: absolute;
+        z-index: 100;
+        transition: 0.5s;
+        .container__header{
+            max-width: 1200px;
+            margin: 0px auto;
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            .btn__home__page{
+                button.btn__homepage{
+                    display: inline-block;
+                    padding: 7px 10px;
+                    border: 1px solid #BCBCBC;
+                    outline: none;
+                    background-color: rgba(255, 255, 255, 0.5);
+                    cursor: pointer;
+                    margin: 0px 20px;
+                    border-radius: 5px;
+                }
+                span{
+                    font-family: $fontfamily;
+                    font-weight: bold;
+                }
+            }
+            nav.navbar__IndieBrew{
+                width: 350px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                ul.slist__item{
+                    list-style-type: none;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    li.list__item__list{
+                        margin: 10px;
+                        padding: 5px;
+                        font-family: $fontfamily;
+                        a.list__item__list__link{
+                            text-decoration: none;
+                            color: #000;
+                        }
+                    }
+                }
+                .btn__header{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    button.btn__header{
+                        display: inline-block;
+                        padding: 12px 25px;
+                        outline: none;
+                        border: none;
+                        background-color: var(--background-btn);
+                        color: var(--background-hero);
+                        font-family: $fontfamily;
+                        cursor: pointer;
+                        border-radius: 5px;
+                        a{
+                            text-decoration: none;
+                            font-family: $fontfamily;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    header.sticky{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        transition: 0.5s;
+        background: rgba(107, 107, 107, 0.8);
+        padding: 1% 2%;
+        .container__header{
+            nav.navbar__IndieBrew{
+                ul.slist__item{
+                    li.list__item__list{
+                        a.list__item__list__link{
+                            color: #fff;
+                        }
+                    }
+                }
+            }  
+        }
+    }
+    section.banner__IndieBrew{
+        width: 100%;
+        height: 100vh;
+        background: var(--background-banner);
+        .container__banner__IndieBrew{
+            max-width: 1200px;
+            margin: 0px auto;
+            padding: 150px 0px;
+            .row__banner__IndieBrew{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .box__banner__text{
+                    width: 500px;
+                    height: auto;
+                    padding: 10px;
+                    h1{
+                        font-family: $fontfamily;
+                        font-size: 45px;
+                    }
+                    span{
+                        margin: 20px 0px;
+                        display: block;
+                        font-family: $fontfamily;
+                        color: var(--color-text);
+                    }
+                    .btn__banner{
+                        button.btn__banner{
+                            display: block;
+                            padding: 12px 40px;
+                            outline: none;
+                            border: none;
+                            font-family: $fontfamily;
+                            background-color: var(--background-btn);
+                            color: #fff;
+                            cursor: pointer;
+                            border-radius: 5px;
+                            a{
+                                text-decoration: none;
+                                font-family: $fontfamily;
+                                color: #fff;
+                            }
+                        }
+                    }
+                    img{
+                        display: block;
+                        margin: 20px 0px;
+                    }
+                    span.text{
+                        margin: 0px 0px;
+                        display: inline-block;
+                        span.color{
+                            display: inline-block;
+                            color: var(--background-btn);
+                        }
+                    }
+                }
+                .box__banner__img{
+                    width: 500px;
+                    height: auto;
+                    animation-name: float;
+                    animation-timing-function: ease-in;
+                    animation-iteration-count: infinite;
+                    animation-duration:4.5s;
+                    img{
+                        display: block;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    section.sign__up_IndieBrew{
+        width: 100%;
+        position: relative;
+        height: auto;
+        background: var(--background-banner);
+        .container__sign__up_IndieBrew{
+            max-width: 1200px;
+            margin: 0px auto;
+            padding-top: 150px;
+            .row__sign__up_IndieBrew{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px;
+                .box__sign__up_IndieBrew{
+                    width: 400px;
+                    position: relative;
+                    height: auto;
+                    h1{
+                        font-family: $fontfamily;
+                        font-size: 30px;
+                    }
+                    p{
+                        margin: 40px 20px;
+                        font-family: $fontfamily;
+                    }
+                    p.title__1::before{
+                        content: '🎈';
+                        position: absolute;
+                        left: -15px;
+                    }
+                    p.title__2::before{
+                        content: '🗞️';
+                        position: absolute;
+                        left: -15px;
+                    }
+                    p.title__3::before{
+                        content: '💡';
+                        position: absolute;
+                        left: -15px;
+                    }
+                }
+                .box__form__sign__up_IndieBrew{
+                    width: 600px;
+                    border: 1px solid #BCBCBC;
+                    padding: 20px 0px;
+                    border-radius: 10px;
+                    form{
+                        width: 100%;
+                        padding: 20px;
+                        h1{
+                            text-align: center;
+                            font-family: $fontfamily;
+                        }
+                        .input__group{
+                            width: 100%;
+                            margin: 30px 0px;
+                            label{
+                                display: block;
+                                font-family: $fontfamily;
+                                font-weight: 700;
+                                font-size: 20px;
+                                margin: 10px 0px;
+                            }
+                            input[type="text"],
+                            input[type="email"],
+                            input[type="password"]{
+                                width: 100%;
+                                font-family: $fontfamily;
+                                font-size: 17px;
+                                padding: 10px 5px;
+                                border: 1px solid #BCBCBC;
+                                border-radius: 5px;
+                            }
+                        }
+                    }
+                  .check{
+                      display: flex;
+                      align-items: baseline;
+                      span{
+                        font-family: $fontfamily;
+                        width: 80%;
+                        display: inline-block;
+                        margin-left: 20px;
+                      }
+                  }
+                  button.btn__input{
+                      display: block;
+                      width: 100%;
+                      background-color: var(--background-btn);
+                      padding: 15px 30px;
+                      color: #fff;
+                      font-family: $fontfamily;
+                      margin: 20px auto;
+                      outline: none;
+                      border: none;
+                      font-weight: bold;
+                      border-radius: 5px;
+                      cursor: pointer;
+                  }
+                }
+            }
+        }
+    }
+    section.IndieBrew__hero{
+        padding: 100px 10px;
+        position: relative;
+        .container__IndieBrew__hero{
+            max-width: 1200px;
+            margin: 0px auto;
+            .row__IndieBrew__hero{
+                display: flex;
+                justify-content: space-between;
+                align-items: stretch;
+                .box__text__hero{
+                    width:600px;
+                    h1{
+                        font-family: $fontfamily;
+                        font-size: 40px;
+                        line-height: 1.0;
+                    }
+                    span{
+                        margin: 20px 0px;
+                        font-family: $fontfamily;
+                        display: inline-block;
+                    }
+                    a{
+                        font-family: $fontfamily;
+                        color: #664EFC;
+                        font-size: 20px;
+                        i{
+                            display: inline-block;
+                            margin-left: 5px;
+                            animation:  right 2.5s ease-in infinite;
+                        }
+                    }
+                    a:hover{
+                        transform: scale(1);
+                    }
+                }
+                .box__text__hero__img{
+                    width: 400px;
+                    padding: 5px;
+                    img{
+                        display: block;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    section.IndieBrew__hero__2{
+        padding: 20px 0px;
+        position: relative;
+        .container__IndieBrew__hero__2{
+            max-width: 1200px;
+            margin: 0px auto;
+            .row__IndieBrew__hero__2{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .box__image__phone{
+                    width: 550px;
+                    height: auto;
+                    animation-name: scale;
+                    animation-timing-function: ease-in;
+                    animation-iteration-count: infinite;
+                    animation-duration:5.5s;
+                    img{
+                        display: block;
+                        width: 100%;
+                    }
+                }
+                .box__text__hero__2{
+                    width: 600px;
+                    height: auto;
+                    h1{
+                        font-family: $fontfamily;
+                        margin: 20px auto;
+                        font-size: 40px;
+                    }
+                    span{
+                        font-family: $fontfamily;
+                        display: inline-block;
+                    }
+                    a{
+                        display: block;
+                        font-family: $fontfamily;
+                        font-size: 20px;
+                        margin: 10px 0px;
+                        color: #664EFC;
+                        i{
+                            display: inline-block;
+                            margin-left: 5px;
+                            animation:  right 2.5s ease-in infinite;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    section.footer{
+        margin-top: 50px;
+        padding: 50px 0px;
+        position: relative;
+        background-color: #FDFCF9;
+        footer{
+            max-width: 1200px;
+            margin: 0px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            .box__footer_text{
+                width: 300px;
+                font-family: $fontfamily;
+                color: var(--color-text);
+            }
+            .list__footer{
+                font-family: $fontfamily;
+                h4{
+                    font-size: 20px;
+                }
+                ul{
+                    li{
+                        list-style-type: none;
+                        a{
+                            text-decoration: none;
+                            color:var(--color-text);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    section.footer#footer{
+        margin: 0px;
+    }
+}
+@keyframes float {
+    0%{
+        transform: translateY(-10px);
+        transition: 4.5s;
+    }
+    50%{
+        transform: translateY(10px);
+        transition: 4.5s;
+    }
+    100%{
+        transform: translateY(-10px);
+        transition: 4.5s;
+    }
+}
+@keyframes right {
+    0%{
+        transform: translateX(-5px);
+    }
+    50%{
+        transform: translateX(5px);
+    }
+    100%{
+        transform: translateX(-5px);
+    }
+}
+@keyframes scale {
+    0%{
+        transform: translateY(-10px)
+    }
+    50%{
+        transform: translateY(10px)
+    }
+    100%{
+        transform: translateY(-10px)
+    }
+}
