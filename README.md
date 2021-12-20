@@ -8,7 +8,7 @@ Codewell's aim is to provide you with real-world design templates that you can u
 
 We recommend using one of these two websites to deploy your projects
 
-- [GitHub Pages](https://pages.github.com/)
+- [GitHub Pages](https://ahmadsabili0081.github.io/IndieBrew/)
 
 They're super easy to setup and you should have your website up and running in no time, just follow their instructions.
 
